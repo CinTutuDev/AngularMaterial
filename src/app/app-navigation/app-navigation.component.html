@@ -9,8 +9,8 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-   
+      <a mat-list-item href="/" (click)="drawer.toggle()" >Panel/home <mat-icon>home</mat-icon></a>
+      <a mat-list-item href="/about" (click)="drawer.toggle()" >Sobre <mat-icon>redo</mat-icon></a>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -27,6 +27,12 @@
       </button>
       <span>Angular Material </span>
       <img src="assets\breakinBAdIco70px.jpg" alt="bb" width="50" />
+      <span class="spacer"></span>
+      <div [class.hidden]="isHandset$ | async" >
+        <a mat-button href="/"  >Panel/home <mat-icon>home</mat-icon></a>
+        <a mat-button href="/about">Sobre <mat-icon>redo</mat-icon></a>
+      </div>
+  
     </mat-toolbar>
     
    <router-outlet></router-outlet>
