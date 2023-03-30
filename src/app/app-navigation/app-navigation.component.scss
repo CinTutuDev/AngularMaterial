@@ -24,3 +24,7 @@
 .active-link{
 background-color:orange;
 }
+.mat-toolbar{
+  padding-top:env(safe-area-inset-top);
+  height: calc(56px + env(safe-area-inset-top));
+}
