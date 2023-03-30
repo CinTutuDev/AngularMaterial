@@ -32,4 +32,7 @@ ng add @angular/material
  ```
  Include the Angular animations module? yes
  ```
- 
+ * Levantar app
+```
+ ng serve -o
+ ```
