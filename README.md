@@ -121,5 +121,10 @@ const config: CapacitorConfig = {
 };
 
 ```
-
+* Ir a terminal y tirar este comando
+``` 
+ npx cap sync
+ ng build && npx cap copy
+  ```
+ 
 
