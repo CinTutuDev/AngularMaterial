@@ -15,6 +15,10 @@ https://material.angular.io/
 ```
 https://material.angular.io/guide/schematics
 ```
+* Capactor
+```
+https://capacitorjs.com/
+```
 ## Creo el nuevo proyecto scss:
 ```
 ng new AngularMaterial --routing --style=scss
@@ -86,6 +90,9 @@ const routes: Routes = [
 ```
   <router-outlet></router-outlet>
 ```
-
+## Antes de añdir Capacitor hago build
+```
+ng build
+```
 
 
