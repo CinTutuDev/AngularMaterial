@@ -43,3 +43,8 @@ ng add @angular/material
 ```
 ng g @angular/material:navigation app-navigation
 ```
+* Vamos a src\app\app.component.html
+ - Borramos todos y añadimos el componente navigator:
+ ```
+ <app-app-navigation></app-app-navigation>
+ ```
