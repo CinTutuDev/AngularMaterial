@@ -126,5 +126,12 @@ const config: CapacitorConfig = {
  npx cap sync
  ng build && npx cap copy
   ```
- 
-
+ * Si no levanta la app👀
+  ```
+  npm uninstall -g @capacitor/cli
+  npm install -g @capacitor/cli
+  npx cap remove android
+ (si no puedes quitarla del archivo)
+  npx cap add android
+  npx cap open android
+```
