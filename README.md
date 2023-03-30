@@ -11,7 +11,10 @@ https://angular.io/start
 ```
 https://material.angular.io/
 ```
- 
+* schematics
+```
+https://material.angular.io/guide/schematics
+```
 ## Creo el nuevo proyecto scss:
 ```
 ng new AngularMaterial --routing --style=scss
@@ -32,4 +35,16 @@ ng add @angular/material
  ```
  Include the Angular animations module? yes
  ```
- 
+ * Levantar app
+```
+ ng serve -o
+ ```
+* App navigator
+```
+ng g @angular/material:navigation app-navigation
+```
+* Vamos a src\app\app.component.html
+ - Borramos todos y añadimos el componente navigator:
+ ```
+ <app-app-navigation></app-app-navigation>
+ ```
