@@ -48,3 +48,44 @@ ng g @angular/material:navigation app-navigation
  ```
  <app-app-navigation></app-app-navigation>
  ```
+* Crear componente 
+```
+ng g component about
+```
+* crear dashboard (Panel)
+```
+ng g @angular/material:dashboard panel
+```
+## Creo las Path en app-routing.module.ts
+```
+const routes: Routes = [
+  {
+    path: '',
+    children: [
+      {
+        path: '',
+        component: PanelComponent
+      },
+      {
+        path: 'about',
+        component: AboutComponent
+      },
+      {
+        path: '404',
+        component: ErrorComponent
+      },
+      {
+        path: '**',
+        redirectTo: '404',
+      }
+    ]
+  }
+];
+```
+## Para añadir el panel o DAshboard al pg de inicio \app-navigation\app-navigation.component.html
+```
+  <router-outlet></router-outlet>
+```
+
+
+
