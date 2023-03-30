@@ -15,6 +15,10 @@ https://material.angular.io/
 ```
 https://material.angular.io/guide/schematics
 ```
+* Capactor
+```
+https://capacitorjs.com/
+```
 ## Creo el nuevo proyecto scss:
 ```
 ng new AngularMaterial --routing --style=scss
@@ -86,6 +90,48 @@ const routes: Routes = [
 ```
   <router-outlet></router-outlet>
 ```
+## Antes de añdir Capacitor hago build
+```
+ng build
+```
+## Instalar Capacitor
+```
+ npm install @capacitor/cli --save-dev
+ npx cap init
+```
+## Para instalar ios/android
+```
+npm install @capacitor/ios @capacitor/android
+npx cap add android
+npx cap add ios
+```
+* 👀Error❗❗
+[error] The web assets directory (.\dist) must con......<br>
+[error] Error: ENOENT: no such file or director.........<br>
+* Ir capacitor.config.ts
+```
+const config: CapacitorConfig = {
+❗❗donde esta el dist:
+ ❌ webDir: 'dist',
+ 
+};
+const config: CapacitorConfig = {
+❗❗donde esta el dist PONER el nombre del proyecto como vien en el dist:
+ ✔ webDir: 'dist/angular-material',
+};
 
-
-
+```
+* Ir a terminal y tirar este comando
+``` 
+ npx cap sync
+ ng build && npx cap copy
+  ```
+ * Si no levanta la app👀
+  ```
+  npm uninstall -g @capacitor/cli
+  npm install -g @capacitor/cli
+  npx cap remove android
+ (si no puedes quitarla del archivo)
+  npx cap add android
+  npx cap open android
+```
