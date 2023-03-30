@@ -94,5 +94,32 @@ const routes: Routes = [
 ```
 ng build
 ```
+## Instalar Capacitor
+```
+ npm install @capacitor/cli --save-dev
+ npx cap init
+```
+## Para instalar ios/android
+```
+npm install @capacitor/ios @capacitor/android
+npx cap add android
+npx cap add ios
+```
+* 👀Error❗❗
+[error] The web assets directory (.\dist) must con......<br>
+[error] Error: ENOENT: no such file or director.........<br>
+* Ir capacitor.config.ts
+```
+const config: CapacitorConfig = {
+❗❗donde esta el dist:
+ ❌ webDir: 'dist',
+ 
+};
+const config: CapacitorConfig = {
+❗❗donde esta el dist PONER el nombre del proyecto como vien en el dist:
+ ✔ webDir: 'dist/angular-material',
+};
+
+```
 
 
