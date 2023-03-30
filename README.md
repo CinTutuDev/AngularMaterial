@@ -11,7 +11,10 @@ https://angular.io/start
 ```
 https://material.angular.io/
 ```
- 
+* schematics
+```
+https://material.angular.io/guide/schematics
+```
 ## Creo el nuevo proyecto scss:
 ```
 ng new AngularMaterial --routing --style=scss
@@ -36,3 +39,7 @@ ng add @angular/material
 ```
  ng serve -o
  ```
+* App navigator
+```
+ng g @angular/material:navigation app-navigation
+```
