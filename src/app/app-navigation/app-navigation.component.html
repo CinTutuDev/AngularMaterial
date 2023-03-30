@@ -5,12 +5,24 @@
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
-   
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="/" (click)="drawer.toggle()" >Panel/home <mat-icon>home</mat-icon></a>
-      <a mat-list-item href="/about" (click)="drawer.toggle()" >Sobre <mat-icon>redo</mat-icon></a>
+      <a
+        mat-button
+        routerLink="/"
+        [routerLinkActive]="'active-link'"
+        [routerLinkActiveOptions]="{exact: true}"
+        (click)="drawer.toggle()"
+        >Panel/home</a
+      >
+      <a
+        mat-list-item
+        href="/about"
+        [routerLinkActive]="'active-link'"
+        (click)="drawer.toggle()"
+        >Sobre <mat-icon>redo</mat-icon></a
+      >
     </mat-nav-list>
   </mat-sidenav>
 
@@ -28,15 +40,26 @@
       <span>Angular Material </span>
       <img src="assets\breakinBAdIco70px.jpg" alt="bb" width="50" />
       <span class="spacer"></span>
-      <div [class.hidden]="isHandset$ | async" >
-        <a mat-button href="/"  >Panel/home <mat-icon>home</mat-icon></a>
-        <a mat-button href="/about">Sobre <mat-icon>redo</mat-icon></a>
+      <div [class.hidden]="isHandset$ | async">
+        <a
+          mat-button
+          routerLink="/"
+          [routerLinkActive]="'active-link'"
+          [routerLinkActiveOptions]="{exact: true}"
+          >Panel/home
+        </a>
+
+        <a
+          mat-button
+          routerLink="/about"
+          [routerLinkActive]="'active-link'"
+          >Sobre <mat-icon>redo</mat-icon></a
+        >
       </div>
-  
     </mat-toolbar>
-    
-   <router-outlet></router-outlet>
-   
+
+    <router-outlet></router-outlet>
+
     <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

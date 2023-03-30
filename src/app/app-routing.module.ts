@@ -4,32 +4,34 @@ import { PanelComponent } from './panel/panel.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
 
+import { CommonModule } from '@angular/common';
+
 const routes: Routes = [
   {
     path: '',
     children: [
       {
         path: '',
-        component: PanelComponent
+        component: PanelComponent,
       },
       {
         path: 'about',
-        component: AboutComponent
+        component: AboutComponent,
       },
       {
         path: '404',
-        component: ErrorComponent
+        component: ErrorComponent,
       },
       {
         path: '**',
         redirectTo: '404',
-      }
-    ]
-  }
+      },
+    ],
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), CommonModule],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
